@@ -28,6 +28,16 @@ There is no website “à la Google Fonts Pairing but for listing features”, t
 
 This (currently crude) web app is an attempt at easing the whole process by providing a test case for most latin open type features. Oh, and it can also tell if your browser actually supports some features.
 
+## To Do
+
+- [short term] add ornaments
+- [short term] Chrome resets scroll offset when typing in the input (which is `position-sticky`), I kinda like the idea for other browsers but this is obviously debatable
+- [short term] ideally, defaults should be `textarea`s so that you can customize the section (sync related tests)
+- [middle term] design a well thought out system for options, it’s super crude at the moment
+- [middle term] depends on implementations but hide/show old/new syntax?
+- [middle term] add character variant (this is a tough one)
+- [long term] add support for server-side fonts
+
 ## License
 
 [MIT Licence](https://opensource.org/licenses/MIT).
