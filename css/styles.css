@@ -1,0 +1,1148 @@
+@charset "UTF-8";
+
+/* Variables */
+
+:root {
+  --font-family: Times New Roman;
+  --font-weight: normal;
+  --font-style: normal;
+  --salt: 1;
+  --swsh: 1;
+  --ornm: 1;
+  --nalt: 1;
+}
+
+.old-syntax {
+  --styleset: "ss01";
+}
+
+.new-syntax {
+  --styleset: 1;
+}
+
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+header,
+main,
+section,
+footer {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+a {
+  background-color: transparent; 
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+code {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+img {
+  border-style: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+input,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+input {
+  overflow: visible;
+}
+
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="text"] {
+  cursor: text;
+  border: 0;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Custom
+	 ========================================================================== */
+	 
+html {
+	font-size: 62.5%;
+	background-color: #FDFDFD;
+  box-sizing: border-box;
+}
+
+*, *:after, *before {
+  box-sizing: inherit;
+}
+	 
+body {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.65;
+  margin: 128px auto 36px auto;
+  margin: 12.8rem auto 3.6rem auto;
+}
+
+main {
+  max-width: 60em;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+    "input input"
+    "old-common new-common"
+    "old-kerning new-kerning"
+    "old-caps new-caps"
+    "old-numeric new-numeric"
+    "old-position new-position"
+    "old-ligatures new-ligatures"
+    "old-alternates new-alternates";
+}
+
+#input {
+  grid-area: input;
+}
+
+#old-common {
+  grid-area: old-common;
+}
+
+#new-common {
+  grid-area: new-common;
+}
+
+#old-kerning {
+  grid-area: old-kerning;
+}
+
+#new-kerning {
+  grid-area: new-kerning;
+}
+
+#old-caps {
+  grid-area: old-caps;
+}
+
+#new-caps {
+  grid-area: new-caps;
+}
+
+#old-numeric {
+  grid-area: old-numeric;
+}
+
+#new-numeric {
+  grid-area: new-numeric;
+}
+
+#old-position {
+  grid-area: old-position;
+}
+
+#new-position {
+  grid-area: new-position;
+}
+
+#old-liga {
+  grid-area: old-ligatures;
+}
+
+#new-liga {
+  grid-area: new-ligatures;
+}
+
+#old-alt {
+  grid-area: old-alternates;
+}
+
+#new-alt {
+  grid-area: new-alternates;
+}
+
+header {
+  max-width: 60em;
+	margin: 0 auto 48px auto;
+	margin: 0 auto 4.8rem auto;
+  padding: 0 20px;
+  padding: 0 2rem;
+}
+
+section {
+	padding: 48px 0;
+	padding: 4.8rem 0;
+	margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  padding: 0 2rem;
+}
+
+footer {
+  max-width: 42em;
+	margin: 72px auto 0 auto;
+	margin: 7.2rem auto 0 auto;
+	text-align: center;
+  padding: 0 20px;
+  padding: 0 2rem;
+}
+
+#old-common, 
+#new-common {
+  margin-top: 72px;
+  margin-top: 7.2rem;
+}
+
+#input {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 36px 0 18px 0;
+  margin: 3.6rem 0 1.8rem 0;
+}
+
+.flex h3, 
+.flex select {
+  margin: 0;
+}
+
+.flex select {
+  margin-top: 5px;
+  margin-top: 0.5rem;
+  margin-left: auto;
+}
+
+hr {
+  border: none;
+  background: transparent;
+  margin: 72px 0 48px 0;
+  margin: 7.2rem 0 4.8rem 0;
+}
+
+hr:after {
+  position: relative;
+  content: "* * *";
+  text-align: center;
+  display: block;
+  margin-top: -24px;
+  margin-top: -2.4rem;
+}
+
+h1 {
+	font-size: 36px;
+	font-size: 3.6rem;
+	line-height: 1.2;
+	text-align: center;
+	font-weight: 800;
+	margin: 0 0 72px 0;
+	margin: 0 0 7.2rem 0;
+}
+
+h2 {
+	font-size: 28px;
+	font-size: 2.8rem;
+	line-height: 1;
+	text-align: center;
+	margin: 0 0 48px 0;
+	margin: 0 0 4.8rem 0;
+}
+
+h3 {
+  margin: 36px 0 18px 0;
+  margin: 3.6rem 0 1.8rem 0;
+}
+
+p {
+  margin: 0;
+}
+
+#old-kerning p,
+#new-kerning p,
+#old-numeric p:not(.ordinal):not(.diagonal-fractions):not(.stacked-fractions),
+#new-numeric p:not(.ordinal):not(.diagonal-fractions):not(.stacked-fractions),
+.annotation-alt {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+
+#old-numeric p:not(.ordinal):not(.diagonal-fractions):not(.stacked-fractions),
+#new-numeric p:not(.ordinal):not(.diagonal-fractions):not(.stacked-fractions),
+.annotation-alt {
+  word-break: break-all;
+}
+
+#old-alt p:not(.annotation-alt),
+#new-alt p:not(.annotation-alt) {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.lead {
+	font-size: 21px;
+	font-size: 2.1rem;
+	line-height: 1.4;
+  margin-top: 1em;
+}
+
+.secondary {
+	font-size: 16px;
+	font-size: 1.6rem;
+	margin: 0;
+}
+
+code {
+  font-family: "Andale Mono", Menlo, Consolas, monospace;
+  font-size: 87.5%;
+}
+
+a {
+	color: currentColor;
+	font-weight: bold;
+}
+
+#fontInput {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #999;
+  padding: 20px 15px 10px 15px;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  background: #FDFDFD;
+  font-family: var(--font-family);
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1;
+  transition: border 350ms;
+  color: red;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+#fontInput:focus {
+  border-bottom: 2px solid currentColor;
+  transition: border 350ms;
+}
+
+@-ms-viewport { 
+	width: device-width; 
+}
+
+@media screen and (max-width: 560px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+@supports not (font-feature-settings: "kern", "liga", "clig") {
+  .old-syntax .recap {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .recap {
+  font-feature-settings: "kern", "liga", "clig";
+}
+
+.old-syntax .recap:first-line {
+  font-feature-settings: "kern", "liga", "clig", "smcp";
+}
+
+.old-syntax .recap span:first-child {
+  font-feature-settings: "frac";
+}
+
+.old-syntax .recap span:nth-child(2) {
+  font-feature-settings: "zero";
+}
+
+.old-syntax .recap span:nth-child(3) {
+  font-feature-settings: "onum", "pnum";
+}
+
+.old-syntax .recap span:last-child {
+  font-feature-settings: "onum", "pnum", "ordn";
+}
+
+@supports not ((font-variant-ligatures: common-ligatures) and (font-kerning: normal)) {
+  .new-syntax .recap {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .recap {
+  font-variant-ligatures: common-ligatures;
+  font-kerning: normal;
+}
+
+.new-syntax .recap:first-line {
+  font-variant-caps: small-caps;
+}
+
+.new-syntax .recap span:first-child {
+  font-variant-numeric: diagonal-fractions;
+}
+
+.new-syntax .recap span:nth-child(2) {
+  font-variant-numeric: slashed-zero;
+}
+
+.new-syntax .recap span:nth-child(3) {
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+.new-syntax .recap span:last-child {
+  font-variant-numeric: oldstyle-nums proportional-nums ordinal;
+}
+
+@supports not (font-feature-settings: "kern" 0) {
+  .old-syntax .no-kern {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .no-kern {
+  text-rendering: optimizeSpeed;
+  font-feature-settings: "kern" 0;
+}
+
+@supports not (font-kerning: none) {
+  .new-syntax .no-kern {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .no-kern {
+  font-kerning: none;
+}
+
+@supports not (font-feature-settings: "kern") {
+  .old-syntax .normal-kern {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .normal-kern {
+  font-feature-settings: "kern";
+}
+
+@supports not (font-kerning: normal) {
+  .old-syntax .normal-kern {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .normal-kern {
+  font-kerning: normal;
+}
+
+@supports not (font-feature-settings: normal) {
+  .old-syntax .normal-caps {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .normal-caps {
+  font-feature-settings: normal;
+}
+
+@supports not (font-variant-caps: normal) {
+  .new-syntax .normal-caps {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .normal-caps {
+  font-variant-caps: normal;
+}
+
+@supports not (font-feature-settings: "smcp") {
+  .old-syntax .small-caps {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .small-caps {
+  font-feature-settings: "smcp";
+}
+
+@supports not (font-variant-caps: small-caps) {
+  .new-syntax .small-caps {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .small-caps {
+  font-variant-caps: small-caps;
+}
+
+@supports not (font-feature-settings: "smcp", "c2sc") {
+  .old-syntax .all-small-caps {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .all-small-caps {
+  font-feature-settings: "smcp", "c2sc";
+}
+
+@supports not (font-variant-caps: all-small-caps) {
+  .new-syntax .all-small-caps {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .all-small-caps {
+  font-variant-caps: all-small-caps;
+}
+
+@supports not (font-feature-settings: "pcap") {
+  .old-syntax .petite-caps {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .petite-caps {
+  font-feature-settings: "pcap";
+}
+
+@supports not (font-variant-caps: petite-caps) {
+  .new-syntax .petite-caps {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .petite-caps {
+  font-variant-caps: petite-caps;
+}
+
+@supports not (font-feature-settings: "pcap", "c2pc") {
+  .old-syntax .all-petite-caps {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .all-petite-caps {
+  font-feature-settings: "pcap", "c2pc";
+}
+
+@supports not (font-variant-caps: all-petite-caps) {
+  .new-syntax .all-petite-caps {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .all-petite-caps {
+  font-variant-caps: all-petite-caps;
+}
+
+@supports not (font-feature-settings: "unic") {
+  .old-syntax .unicase {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .unicase {
+  font-feature-settings: "unic";
+}
+
+@supports not (font-variant-caps: unicase) {
+  .new-syntax .unicase {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .unicase {
+  font-variant-caps: unicase;
+}
+
+@supports not (font-feature-settings: "titl") {
+  .old-syntax .titling-caps {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .titling-caps {
+  font-feature-settings: "titl";
+}
+
+@supports not (font-variant-caps: titling-caps) {
+  .new-syntax .titling-caps {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .titling-caps {
+  font-variant-caps: titling-caps;
+}
+
+@supports not (font-feature-settings: normal) {
+  .old-syntax .normal-numeric {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .normal-numeric {
+  font-feature-settings: normal;
+}
+
+@supports not (font-variant-numeric: normal) {
+  .new-syntax .normal-numeric {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .normal-numeric {
+  font-variant-numeric: normal;
+}
+
+@supports not (font-feature-settings: "onum") {
+  .old-syntax .oldstyle-nums {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .oldstyle-nums {
+  font-feature-settings: "onum";
+}
+
+@supports not (font-variant-numeric: oldstyle-nums) {
+  .new-syntax .oldstyle-nums {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .oldstyle-nums {
+  font-variant-numeric: oldstyle-nums;
+}
+
+@supports not (font-feature-settings: "lnum") {
+  .old-syntax .lining-nums {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .lining-nums {
+  font-feature-settings: "lnum";
+}
+
+@supports not (font-variant-numeric: lining-nums) {
+  .new-syntax .lining-nums {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .lining-nums {
+  font-variant-numeric: lining-nums;
+}
+
+@supports not (font-feature-settings: "pnum") {
+  .old-syntax .proportional-nums {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .proportional-nums {
+  font-feature-settings: "pnum";
+}
+
+@supports not (font-variant-numeric: proportional-nums) {
+  .new-syntax .proportional-nums {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .proportional-nums {
+  font-variant-numeric: proportional-nums;
+}
+
+@supports not (font-feature-settings: "tnum") {
+  .old-syntax .tabular-nums {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .tabular-nums {
+  font-feature-settings: "tnum";
+}
+
+@supports not (font-variant-numeric: tabular-nums) {
+  .new-syntax .tabular-nums {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@supports not (font-feature-settings: "ordn") {
+  .old-syntax .ordinal {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .ordinal {
+  font-feature-settings: "ordn";
+}
+
+@supports not (font-variant-numeric: ordinal) {
+  .new-syntax .ordinal {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .ordinal {
+  font-variant-numeric: ordinal;
+}
+
+@supports not (font-feature-settings: "zero") {
+  .old-syntax .slashed-zero {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .slashed-zero {
+  font-feature-settings: "zero";
+}
+
+@supports not (font-variant-numeric: slashed-zero) {
+  .new-syntax .slashed-zero {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .slashed-zero {
+  font-variant-numeric: slashed-zero;
+}
+
+@supports not (font-feature-settings: "frac") {
+  .old-syntax .diagonal-fractions {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .diagonal-fractions {
+  font-feature-settings: "frac";
+}
+
+@supports not (font-variant-numeric: diagonal-fractions) {
+  .new-syntax .diagonal-fractions {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .diagonal-fractions {
+  font-variant-numeric: diagonal-fractions;
+}
+
+@supports not (font-feature-settings: "afrc") {
+  .old-syntax .stacked-fractions {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .stacked-fractions {
+  font-feature-settings: "afrc";
+}
+
+@supports not (font-variant-numeric: stacked-fractions) {
+  .new-syntax .stacked-fractions {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .stacked-fractions {
+  font-variant-numeric: stacked-fractions;
+}
+
+@supports not (font-feature-settings: normal) {
+  .old-syntax .normal-position {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .normal-position {
+  font-feature-settings: normal;
+}
+
+@supports not (font-variant-position: normal) {
+  .new-syntax .normal-position {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .normal-position {
+  font-variant-position: normal;
+}
+
+@supports not (font-feature-settings: "subs") {
+  .old-syntax .sub-position {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .sub-position span {
+  font-feature-settings: "subs";
+}
+
+@supports not (font-variant-position: sub) {
+  .new-syntax .sub-position {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .sub-position span {
+  font-variant-position: sub;
+}
+
+@supports not (font-feature-settings: "sups") {
+  .old-syntax .super-position {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .super-position span {
+  font-feature-settings: "sups";
+}
+
+@supports not (font-variant-position: super) {
+  .new-syntax .super-position {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .super-position span {
+  font-variant-position: super;
+}
+
+@supports not (font-feature-settings: normal) {
+  .old-syntax .normal-liga {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .normal-liga {
+  font-feature-settings: normal;
+}
+
+@supports not (font-variant-ligatures: normal) {
+  .new-syntax .normal-liga {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .normal-liga {
+  font-variant-ligatures: normal;
+}
+
+@supports not (font-feature-settings: "liga" 0) {
+  .old-syntax .none-liga {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .none-liga {
+  font-feature-settings: "liga" 0;
+}
+
+@supports not (font-variant-ligatures: none) {
+  .new-syntax .none-liga {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .none-liga {
+  font-variant-ligatures: none;
+}
+
+@supports not (font-feature-settings: "liga", "clig") {
+  .old-syntax .common-liga {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .common-liga {
+  font-feature-settings: "liga", "clig";
+}
+
+@supports not (font-variant-ligatures: common-ligatures) {
+  .new-syntax .common-liga {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .common-liga {
+  font-variant-ligatures: common-ligatures;
+}
+
+@supports not (font-feature-settings: "liga", "dlig") {
+  .old-syntax .discretionary-liga {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .discretionary-liga {
+  font-feature-settings: "liga", "dlig";
+}
+
+@supports not (font-variant-ligatures: common-ligatures discretionary-ligatures) {
+  .new-syntax .discretionary-liga {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .discretionary-liga {
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+}
+
+@supports not (font-feature-settings: "liga", "hlig") {
+  .old-syntax .historical-liga {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .historical-liga {
+  font-feature-settings: "liga", "hlig";
+}
+
+@supports not (font-variant-ligatures: common-ligatures historical-ligatures) {
+  .new-syntax .historical-liga {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .historical-liga {
+  font-variant-ligatures: common-ligatures historical-ligatures;
+}
+
+@supports not (font-feature-settings: "liga", "calt") {
+  .old-syntax .contextual-liga {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .contextual-liga {
+  font-feature-settings: "liga", "calt";
+}
+
+@supports not (font-variant-ligatures: common-ligatures contextual) {
+  .new-syntax .contextual-liga {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .contextual-liga {
+  font-variant-ligatures: common-ligatures contextual;
+}
+
+@supports not (font-feature-settings: normal) {
+  .old-syntax .normal-alt {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .normal-alt {
+  font-feature-settings: normal;
+}
+
+@font-feature-values var(--font-family) {
+  @stylistic {
+    salt: var(--salt);
+  }
+  @styleset {
+    styleset: var(--styleset);
+  }
+  @swash {
+    swsh: var(--swsh);
+  }
+  @ornaments {
+    ornm: var(--ornm);
+  }
+  @annotation {
+    nalt: var(--nalt);
+  }
+}
+
+@supports not (font-variant-alternates: normal) {
+  .new-syntax .normal-alt {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .normal-alt {
+  font-variant-alternates: normal;
+}
+
+@supports not (font-feature-settings: "salt" 1) {
+  .old-syntax .stylistic-alt {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .stylistic-alt {
+  font-feature-settings: "salt" var(--salt);
+}
+
+@supports not (font-variant-alternates: stylistic(salt)) {
+  #new-salt {
+    display: none;
+  }
+  .new-syntax .stylistic-alt {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .stylistic-alt {
+  font-variant-alternates: stylistic(salt);
+}
+
+@supports not (font-feature-settings: "ss01") {
+  .old-syntax .stylistic-alt {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .styleset-alt {
+  font-feature-settings: var(--styleset);
+}
+
+@supports not (font-variant-alternates: styleset(styleset)) {
+  #new-ss {
+    display: none;
+  }
+  .new-syntax .styleset-alt {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .styleset-alt {
+  font-variant-alternates: styleset(styleset);
+}
+
+@supports not (font-feature-settings: "swsh" 1) {
+  .old-syntax .swash-alt {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .swash-alt {
+  font-feature-settings: "swsh" var(--swsh);
+}
+
+@supports not (font-variant-alternates: swash(swsh)) {
+  #new-swsh {
+    display: none;
+  }
+  .new-syntax .swash-alt {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .swash-alt {
+  font-variant-alternates: swash(swsh);
+}
+
+@supports not (font-feature-settings: "ornm" 1) {
+  .old-syntax .ornaments-alt {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .ornaments-alt {
+  font-feature-settings: "ornm" var(--ornm);
+}
+
+@supports not (font-variant-alternates: ornaments(ornm)) {
+  #new-ornm {
+    display: none;
+  }
+  .new-syntax .ornaments-alt {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .ornaments-alt {
+  font-variant-alternates: ornaments(ornm);
+}
+
+@supports not (font-feature-settings: "nalt" 1) {
+  .old-syntax .annotation-alt {
+    opacity: 0.35;
+  }
+}
+
+.old-syntax .annotation-alt {
+  font-feature-settings: "nalt" var(--nalt);
+}
+
+@supports not (font-variant-alternates: annotation(nalt)) {
+  #new-nalt {
+    display: none;
+  }
+  .new-syntax .annotation-alt {
+    opacity: 0.35;
+  }
+}
+
+.new-syntax .annotation-alt {
+  font-variant-alternates: annotation(nalt);
+}

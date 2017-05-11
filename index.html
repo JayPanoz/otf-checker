@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>OTF Checker</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <!-- Favicon -->
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Open Type Checker</h1>
+
+    <p class="lead">This is a minimum viable web app to test most latin open type features.</p>
+
+    <p class="lead">Left column is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings">the old syntax</a> (<code>font-feature-settings</code>).<br/> Right column is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant">the new one</a> (<code>font-variant-*</code>).</p>
+    
+    <p class="lead">Please update to the latest version of your browser to get the best results.<br/> If a feature is not supported by your browser, opacity is applied to the text.</p>
+
+    <hr/>
+
+    <label for="fontInput">
+      <p>Type the name of the typeface you’d like to test then press return.</p> 
+      
+      <p>Please note the font must be installed locally.</p>
+    </label>
+  </header>
+  
+  <main>
+    <div id="input">
+      <input id="fontInput" type="text" name="font" placeholder="Times New Roman" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    </div>
+
+      <section class="section old-syntax" id="old-common">
+        <h2>Common Features</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="default">The Quick Brown Fox Jumps Over The Lazy Dog while the affluent official fly fished in cutoffs. Meanwhile, in a restaurant not that far away, <span>1/2</span> of the tables are unoccupied and one client expects a $<span>100</span> refund. The year is <span>2017</span> and this is a most spectacular story in the <span>21st</span> century.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Kerning, common ligatures, small-caps, diagonal fractions, slashed zero, oldstyle and proportional numerals, and ordinals</h3>
+
+          <p class="recap">The Quick Brown Fox Jumps Over The Lazy Dog while the affluent official fly fished in cutoffs. Meanwhile, in a restaurant not that far away, <span>1/2</span> of the tables are unoccupied and one client expects a $<span>100</span> refund. The year is <span>2017</span> and this is a most spectacular story in the <span>21st</span> century.</p>
+        </section>
+      </section>
+
+      <section class="section old-syntax" id="old-kerning">
+        <h2>Kerning</h2>
+
+        <section class="wrapper">
+          <h3>None</h3>
+
+          <p class="no-kern">To the quick brown fox which jumps over the lazy dog. <span lang="fr">Va-t’en&nbsp;! Avec toi, rien ne va. Quelle bêtise.</span></p>
+        </section>
+        <section class="wrapper">
+          <h3>Normal</h3>
+
+          <p class="normal-kern">To the quick brown fox which jumps over the lazy dog. <span lang="fr">Va-t’en&nbsp;! Avec toi, rien ne va. Quelle bêtise.</span></p>
+        </section>
+      </section>
+
+      <section class="section old-syntax" id="old-caps">
+        <h2>Caps</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Small Capitals</h3>
+
+          <p class="small-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>All Small Capitals</h3>
+
+          <p class="all-small-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Petite Capitals</h3>
+
+          <p class="petite-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>All Petite Capitals</h3>
+
+          <p class="all-petite-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Unicase</h3>
+
+          <p class="unicase">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Titling Capitals</h3>
+
+          <p class="titling-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+      </section>
+
+      <section class="section old-syntax" id="old-numeric">
+        <h2>Numeric</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-numeric">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Oldstyle Figures</h3>
+
+          <p class="oldstyle-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Lining Figures</h3>
+
+          <p class="lining-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Proportional Figures</h3>
+
+          <p class="proportional-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Tabular Figures</h3>
+
+          <p class="tabular-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Slashed Zero</h3>
+
+          <p class="slashed-zero">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Ordinal</h3>
+
+          <p class="ordinal">1a. The 1st is <span lang="fr">le 1er,</span> the 2nd is <span lang="fr">le 2e,</span> the 3rd is <span lang="fr">le 3e</span> and the 4th is <span lang="fr">le 4e.</span></p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Diagonal Fractions</h3>
+
+          <p class="diagonal-fractions">Tonight, 1/2 of the tables are unoccupied. It seems 2/3 of clients are unhappy with their meal and 3/4 of those ones expect a refund. I’m bad at math but this shift sounds like 5/8 of a success.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Stacked Fractions</h3>
+
+          <p class="stacked-fractions">Tonight, 1/2 of the tables are unoccupied. It seems 2/3 of clients are unhappy with their meal and 3/4 of those ones expect a refund. I’m bad at math but this shift sounds like 5/8 of a success.</p>
+        </section>
+      </section>
+
+      <section class="section old-syntax" id="old-position">
+        <h2>Position</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-position">The chemical formula for pure water is H2O. It was discovered in the 19th century.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Sub</h3>
+
+          <p class="sub-position">The chemical formula for pure water is H<span>2</span>O.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Super</h3>
+
+          <p class="super-position">It was discovered in the 19<span>th</span> century.</p>
+        </section>
+      </section>
+
+      <section class="section old-syntax" id="old-liga">
+        <h2>Ligatures</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>No Ligatures</h3>
+
+          <p class="none-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Common Ligatures</h3>
+
+          <p class="common-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Discretionary Ligatures</h3>
+
+          <p class="discretionary-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Historical Ligatures</h3>
+
+          <p class="historical-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Contextual Ligatures</h3>
+
+          <p class="contextual-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+      </section>
+
+      <section class="section old-syntax" id="old-alt">
+        <h2>Alternates</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Historical Forms</h3>
+
+          <p class="hist-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Stylistic Alternates</h3>
+
+            <select id="old-salt" data-otc-var="salt" data-otc-scope=":root">
+              <option value="1">salt 1</option>
+              <option value="2">salt 2</option>
+              <option value="3">salt 3</option>
+            </select>
+          </div>
+
+          <p class="stylistic-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Stylesets</h3>
+
+            <select id="old-ss" data-otc-var="styleset" data-otc-scope=".old-syntax">
+              <option value="'ss01'">ss01</option>
+              <option value="'ss02'">ss02</option>
+              <option value="'ss03">ss03</option>
+              <option value="'ss04">ss04</option>
+              <option value="'ss05">ss05</option>
+              <option value="'ss06">ss06</option>
+              <option value="'ss07">ss07</option>
+              <option value="'ss08">ss08</option>
+              <option value="'ss09">ss09</option>
+              <option value="'ss10">ss10</option>
+              <option value="'ss11">ss11</option>
+              <option value="'ss12">ss12</option>
+              <option value="'ss13">ss13</option>
+              <option value="'ss14">ss14</option>
+              <option value="'ss15">ss15</option>
+              <option value="'ss16">ss16</option>
+              <option value="'ss17">ss17</option>
+              <option value="'ss18">ss18</option>
+              <option value="'ss19">ss19</option>
+              <option value="'ss20">ss20</option>
+            </select>
+          </div>
+
+          <p class="styleset-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Swash Alternates</h3>
+
+            <select id="old-swsh" data-otc-var="swsh" data-otc-scope=":root">
+              <option value="1">swsh 1</option>
+              <option value="2">swsh 2</option>
+              <option value="3">swsh 3</option>
+            </select>
+          </div>
+
+          <p class="swash-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Annotation Alternates</h3>
+
+            <select id="old-nalt" data-otc-var="nalt" data-otc-scope=":root">
+              <option value="1">nalt 1</option>
+              <option value="2">nalt 2</option>
+              <option value="3">nalt 3</option>
+            </select>
+          </div>
+
+          <p class="annotation-alt">0123456789</p>
+        </section>
+      </section>
+
+      <section class="section new-syntax" id="new-common">
+        <h2>Common Features</h2>
+        
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="default">The Quick Brown Fox Jumps Over The Lazy Dog while the affluent official fly fished in cutoffs. Meanwhile, in a restaurant not that far away, <span>1/2</span> of the tables are unoccupied and one client expects a $<span>100</span> refund. The year is <span>2017</span> and this is a most spectacular story in the <span>21st</span> century.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Kerning, common ligatures, small-caps, diagonal fractions, slashed zero, oldstyle and proportional numerals, and ordinals</h3>
+
+          <p class="recap">The Quick Brown Fox Jumps Over The Lazy Dog while the affluent official fly fished in cutoffs. Meanwhile, in a restaurant not that far away, <span>1/2</span> of the tables are unoccupied and one client expects a $<span>100</span> refund. The year is <span>2017</span> and this is a most spectacular story in the <span>21st</span> century.</p>
+        </section>
+      </section>
+
+      <section class="section new-syntax" id="new-kerning">
+        <h2>Kerning</h2>
+
+        <section class="wrapper">
+          <h3>None</h3>
+
+          <p class="no-kern">To the quick brown fox which jumps over the lazy dog. <span lang="fr">Va-t’en&nbsp;! Avec toi, rien ne va. Quelle bêtise.</span></p>
+        </section>
+        <section class="wrapper">
+          <h3>Normal</h3>
+
+          <p class="normal-kern">To the quick brown fox which jumps over the lazy dog. <span lang="fr">Va-t’en&nbsp;! Avec toi, rien ne va. Quelle bêtise.</span></p>
+        </section>
+      </section>
+
+      <section class="section new-syntax" id="new-caps">
+        <h2>Caps</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Small Capitals</h3>
+
+          <p class="small-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>All Small Capitals</h3>
+
+          <p class="all-small-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Petite Capitals</h3>
+
+          <p class="petite-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>All Petite Capitals</h3>
+
+          <p class="all-petite-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Unicase</h3>
+
+          <p class="unicase">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Titling Capitals</h3>
+
+          <p class="titling-caps">The Quick Brown Fox Jumps Over The Lazy Dog.</p>
+        </section>
+      </section>
+
+      <section class="section new-syntax" id="new-numeric">
+        <h2>Numeric</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-numeric">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Oldstyle Figures</h3>
+
+          <p class="oldstyle-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Lining Figures</h3>
+
+          <p class="lining-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Proportional Figures</h3>
+
+          <p class="proportional-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Tabular Figures</h3>
+
+          <p class="tabular-nums">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Slashed Zero</h3>
+
+          <p class="slashed-zero">0123456789</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Ordinal</h3>
+
+          <p class="ordinal">1a. The 1st is <span lang="fr">le 1er,</span> the 2nd is <span lang="fr">le 2e,</span> the 3rd is <span lang="fr">le 3e</span> and the 4th is <span lang="fr">le 4e.</span></p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Diagonal Fractions</h3>
+
+          <p class="diagonal-fractions">Tonight, 1/2 of the tables are unoccupied. It seems 2/3 of clients are unhappy with their meal and 3/4 of those ones expect a refund. I’m bad at math but this shift sounds like 5/8 of a success.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Stacked Fractions</h3>
+
+          <p class="stacked-fractions">Tonight, 1/2 of the tables are unoccupied. It seems 2/3 of clients are unhappy with their meal and 3/4 of those ones expect a refund. I’m bad at math but this shift sounds like 5/8 of a success.</p>
+        </section>
+      </section>
+
+      <section class="section new-syntax" id="new-position">
+        <h2>Position</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-position">The chemical formula for pure water is H2O. It was discovered in the 19th century.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Sub</h3>
+
+          <p class="sub-position">The chemical formula for pure water is H<span>2</span>O.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Super</h3>
+
+          <p class="super-position">It was discovered in the 19<span>th</span> century.</p>
+        </section>
+      </section>
+
+      <section class="section new-syntax" id="new-liga">
+        <h2>Ligatures</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+
+          <p class="normal-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>No Ligatures</h3>
+
+          <p class="none-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Common Ligatures</h3>
+
+          <p class="common-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Discretionary Ligatures</h3>
+
+          <p class="discretionary-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Historical Ligatures</h3>
+
+          <p class="historical-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Contextual Ligatures</h3>
+
+          <p class="contextual-liga">The affluent official fly fished in cutoffs. This is a most spectacular story although it’s blasphemous.</p>
+        </section>
+      </section>
+
+      <section class="section new-syntax" id="new-alt">
+        <h2>Alternates</h2>
+
+        <section class="wrapper">
+          <h3>Default</h3>
+          
+          <p class="normal-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <h3>Historical Forms</h3>
+
+          <p class="hist-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Stylistic Alternates</h3>
+
+            <select id="new-salt" data-otc-var="salt" data-otc-scope=":root">
+              <option value="1">salt 1</option>
+              <option value="2">salt 2</option>
+              <option value="3">salt 3</option>
+            </select>
+          </div>
+
+          <p class="stylistic-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Stylesets</h3>
+
+            <select id="new-ss" data-otc-var="styleset" data-otc-scope=".new-syntax">
+              <option value="1">ss01</option>
+              <option value="2">ss02</option>
+              <option value="3">ss03</option>
+              <option value="4">ss04</option>
+              <option value="5">ss05</option>
+              <option value="6">ss06</option>
+              <option value="7">ss07</option>
+              <option value="8">ss08</option>
+              <option value="9">ss09</option>
+              <option value="10">ss10</option>
+              <option value="11">ss11</option>
+              <option value="12">ss12</option>
+              <option value="13">ss13</option>
+              <option value="14">ss14</option>
+              <option value="15">ss15</option>
+              <option value="16">ss16</option>
+              <option value="17">ss17</option>
+              <option value="18">ss18</option>
+              <option value="19">ss19</option>
+              <option value="20">ss20</option>
+            </select>
+          </div>
+
+          <p class="styleset-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Swash Alternates</h3>
+
+            <select id="new-swsh" data-otc-var="swsh" data-otc-scope=":root">
+              <option value="1">swsh 1</option>
+              <option value="2">swsh 2</option>
+              <option value="3">swsh 3</option>
+            </select>
+          </div>
+
+          <p class="swash-alt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br/> a b c d e f g h i j k l m n o p q r s t u v w x y z<br/> 0 1 2 3 4 5 6 7 8 9</p>
+        </section>
+
+        <section class="wrapper">
+          <div class="flex">
+            <h3>Annotation Alternates</h3>
+
+            <select id="new-nalt" data-otc-var="nalt" data-otc-scope=":root">
+              <option value="1">nalt 1</option>
+              <option value="2">nalt 2</option>
+              <option value="3">nalt 3</option>
+            </select>
+          </div>
+
+          <p class="annotation-alt">0123456789</p>
+        </section>
+      </section>
+  </main>
+
+  <footer>
+  	<p class="secondary">Open Type Checker v 0.1<br/><a href="https://github.com/JayPanoz/otf-checker/blob/master/LICENSE">MIT Licence</a> | <a href="https://github.com/JayPanoz/otf-checker">Source</a></p>
+    <p class="secondary">© 2017 Jiminy Panoz</p>
+  </footer>
+  
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
