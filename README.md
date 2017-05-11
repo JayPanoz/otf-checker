@@ -32,7 +32,7 @@ This (currently crude) web app is an attempt at easing the whole process by prov
 
 - [short term] add ornaments
 - [short term] Chrome resets scroll offset when typing in the input (which is `position-sticky`), I kinda like the idea for other browsers but this is obviously debatable
-- [short term] ideally, defaults should be `textarea`s so that you can customize the section (sync related tests)
+- [short term] ideally, defaults should be `textarea`s so that you can customize the section (sync related tests); please note it implies managing `lang` attribute because of localized forms
 - [middle term] design a well thought out system for options, it’s super crude at the moment
 - [middle term] depends on implementations but hide/show old/new syntax?
 - [middle term] add character variant (this is a tough one)
